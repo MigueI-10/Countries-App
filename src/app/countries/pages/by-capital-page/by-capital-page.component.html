@@ -1,0 +1,23 @@
+<h2>Por Capital</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <shared-search-box 
+        (onDebounce)="searchByCapital($event)"
+        [initialValue]="initialValue"
+        placeholder="Esto es una nueva capital"></shared-search-box>
+        <!-- (onValue)="searchByCapital($event)" -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+    <hr>
+    
+        @if (isLoading) {
+            <shared-loading-spinner></shared-loading-spinner>
+        }
+
+    <countries-table [countries]="countries"></countries-table>
+    </div>
+</div>
